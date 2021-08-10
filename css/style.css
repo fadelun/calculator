@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: transparent;
+}
+
+body {
+  background-color: #FDEFEF;
+  font-family: 'Space Mono', monospace;
+}
+
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container .calculator {
+  background-color: #FFF5EB;
+  box-shadow: 8px 4px 10px #dad0c2b4;
+  padding: 20px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(6, 80px);
+  grid-template-areas: 'output output output output'         'tombol tombol tombol tombol' 'tombol tombol tombol tombol' 'tombol tombol tombol tombol' 'tombol tombol tombol tombol' 'equal equal equal equal';
+  justify-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.container .calculator .output {
+  grid-area: output;
+  border: 1px solid transparent;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.068) inset;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  font-size: 26px;
+  overflow: hidden;
+}
+
+.container .calculator .btn {
+  width: 100%;
+  height: 100%;
+  background-color: #F4C7AB;
+}
+
+.container .calculator .btn:hover {
+  background-color: #DEEDF0;
+  transition: 0.2s;
+}
+
+.container .calculator .btn:active {
+  background-color: #aae3ee;
+}
+
+.container .calculator .equal {
+  grid-area: equal;
+  width: 100%;
+}
+
+@media (max-width: 490px) {
+  .container .calculator {
+    width: 280px;
+    height: 360px;
+    padding: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(6, 50px);
+    column-gap: 2px;
+    row-gap: 2px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container .calculator {
+    width: 99%;
+    height: 400px;
+    padding: 4px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 18%);
+    grid-template-rows: repeat(6, 60px);
+    column-gap: 4px;
+    row-gap: 4px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
